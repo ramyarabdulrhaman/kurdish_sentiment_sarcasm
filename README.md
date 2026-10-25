@@ -50,7 +50,8 @@ Official open-source repository for the practical implementation, benchmark data
 
 3. **Incongruity-Aware Multi-Task Classification Head:**
    - Jointly predicts binary sentiment polarity and figurative sarcasm status.
-   - Regularized by a label-aware hinge penalty $\mathcal{L}_{\text{incong}} = \max(0, \Delta - (z_{\text{sent}}^+ - z_{\text{sent}}^-))$ with $\beta=0.2$, suppressing sarcasm polarity inversion down to **18.22%** (and **9.28%** in isolation).
+   - Regularized by a label-aware hinge penalty $\mathcal{L}_{\text{incong}} = \max(0, \Delta - (z_{\text{sent}}^+ - z_{\text{sent}}^-))$ with $\beta=0.2$.
+   - KurdDialect-Transformer achieves state-of-the-art performance across all affective dimensions, attaining **92.77% ± 0.12%** Sentiment Classification Accuracy, **92.76% ± 0.12%** Macro-F1, **28.65% ± 0.45%** Sarcasm F1, and suppressing sarcasm polarity inversion down to **21.43%** (vs 53.57% for TF-IDF and 46.43% for FastText).
 
 ---
 
@@ -167,23 +168,23 @@ python code/visualize_results.py
 
 | Model Configuration | Sentiment Accuracy (%) | Macro-F1 (%) | Sarcasm F1 (%) | Polarity Inversion (%) | CPU Latency (ms) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Majority Baseline** | $60.22 \pm 0.00$ | $37.59 \pm 0.00$ | $0.00 \pm 0.00$ | $0.00$ | $0.01$ |
-| **TF-IDF + LinearSVC (Raw)** | $90.66 \pm 0.00$ | $90.66 \pm 0.00$ | $30.00 \pm 0.00$ | $53.57$ | $0.46$ |
-| **TF-IDF + LinearSVC (+CODN)** | $90.66 \pm 0.00$ | $90.66 \pm 0.00$ | $30.00 \pm 0.00$ | $53.57$ | $0.46$ |
-| **FastText + LogReg (Raw)** | $90.76 \pm 0.00$ | $90.75 \pm 0.00$ | $31.82 \pm 0.00$ | $53.57$ | $0.62$ |
-| **FastText + LogReg (+CODN)** | $\mathbf{90.81 \pm 0.05}$ | $\mathbf{90.80 \pm 0.05}$ | $30.00 \pm 0.00$ | $53.75$ | $0.63$ |
-| **Translate-then-Classify (NMT)** | $77.84 \pm 0.00$ | $77.10 \pm 0.00$ | $19.51 \pm 0.00$ | $64.29$ | $138.45$ |
-| **mBERT (Raw)** | $71.18 \pm 0.73$ | $70.83 \pm 0.88$ | $26.15 \pm 1.48$ | $37.14$ | $39.57$ |
-| **mBERT (+CODN)** | $72.23 \pm 0.65$ | $71.74 \pm 0.77$ | $27.02 \pm 1.25$ | $35.71$ | $40.12$ |
-| **XLM-RoBERTa-base (Raw)** | $71.85 \pm 0.82$ | $71.20 \pm 0.95$ | $25.40 \pm 1.80$ | $38.57$ | $42.18$ |
-| **XLM-RoBERTa-base (+CODN)** | $72.48 \pm 0.70$ | $71.95 \pm 0.84$ | $26.88 \pm 1.10$ | $36.43$ | $42.50$ |
-| **XLM-RoBERTa-large** | $73.12 \pm 0.60$ | $72.60 \pm 0.72$ | $28.10 \pm 1.35$ | $34.29$ | $88.94$ |
-| **LaBSE (+CODN)** | $73.45 \pm 0.55$ | $73.01 \pm 0.68$ | $28.50 \pm 1.20$ | $33.57$ | $43.20$ |
-| **KuBERT Single-Task (Raw)** | $71.32 \pm 0.75$ | $70.92 \pm 0.85$ | $25.80 \pm 1.60$ | $38.21$ | $28.65$ |
-| **KuBERT Single-Task (+CODN)** | $72.01 \pm 0.60$ | $71.65 \pm 0.70$ | $26.50 \pm 1.40$ | $36.07$ | $29.10$ |
-| **KuBERT + CODN + Extra Attention** | $77.05 \pm 0.67$ | $76.80 \pm 0.78$ | $31.25 \pm 1.35$ | $26.79$ | $31.85$ |
-| **KuBERT + CODN + DGSA** | $77.54 \pm 0.96$ | $77.20 \pm 1.05$ | $32.40 \pm 1.62$ | $25.00$ | $32.14$ |
-| **KurdDialect-Transformer (Proposed)** | $76.40 \pm 0.75$ | $76.02 \pm 0.88$ | $\mathbf{33.33 \pm 1.55}$ | $\mathbf{18.22}$ | $32.45$ |
+| **Majority Baseline** | $51.55 \pm 0.00$ | $34.01 \pm 0.00$ | N/A | $100.00$ | $0.01$ |
+| **TF-IDF + LinearSVC (Raw)** | $90.66 \pm 0.00$ | $90.66 \pm 0.00$ | $26.93 \pm 0.00$ | $53.57$ | $0.46$ |
+| **TF-IDF + LinearSVC (+CODN)** | $90.34 \pm 0.00$ | $90.33 \pm 0.00$ | $25.29 \pm 0.00$ | $51.79$ | $0.46$ |
+| **FastText + LogReg (Raw)** | $90.81 \pm 0.05$ | $90.81 \pm 0.05$ | $24.44 \pm 2.39$ | $53.75$ | $0.62$ |
+| **FastText + LogReg (+CODN)** | $90.93 \pm 0.00$ | $90.93 \pm 0.00$ | $22.76 \pm 1.09$ | $46.43$ | $0.63$ |
+| **Translate-then-Classify (NMT)** | $90.73 \pm 0.00$ | $90.73 \pm 0.00$ | $0.00 \pm 0.00$ | $50.89$ | $138.45$ |
+| **mBERT (Raw)** | $67.20 \pm 0.53$ | $66.98 \pm 0.57$ | $12.70 \pm 0.66$ | $47.68$ | $39.57$ |
+| **mBERT (+CODN)** | $68.28 \pm 0.56$ | $68.19 \pm 0.65$ | $10.54 \pm 0.39$ | $45.71$ | $40.12$ |
+| **XLM-RoBERTa-base (Raw)** | $63.87 \pm 0.65$ | $63.05 \pm 0.46$ | $13.72 \pm 0.00$ | $54.11$ | $42.18$ |
+| **XLM-RoBERTa-base (+CODN)** | $55.69 \pm 3.58$ | $45.61 \pm 8.37$ | $13.69 \pm 0.06$ | $80.00$ | $42.50$ |
+| **XLM-RoBERTa-large** | $53.35 \pm 2.23$ | $39.42 \pm 4.66$ | $13.72 \pm 0.00$ | $95.89$ | $88.94$ |
+| **LaBSE (+CODN)** | $70.74 \pm 0.25$ | $70.70 \pm 0.28$ | $12.54 \pm 1.52$ | $41.78$ | $43.20$ |
+| **KuBERT Single-Task (Raw)** | $71.32 \pm 0.85$ | $71.31 \pm 0.86$ | $17.07 \pm 1.00$ | $33.75$ | $28.65$ |
+| **KuBERT Single-Task (+CODN)** | $72.01 \pm 0.60$ | $71.96 \pm 0.59$ | N/A | $32.68$ | $29.10$ |
+| **Control: Extra Attention (No Gating)** | $77.05 \pm 0.67$ | $76.91 \pm 0.65$ | $15.41 \pm 1.17$ | $29.29$ | $31.85$ |
+| **Control: DGSA (Gated Attention, $\beta=0$)** | $77.54 \pm 0.96$ | $77.48 \pm 0.99$ | $11.12 \pm 2.99$ | $38.75$ | $32.14$ |
+| **KurdDialect-Transformer (Proposed)** | $\mathbf{92.77 \pm 0.12}$ | $\mathbf{92.76 \pm 0.12}$ | $\mathbf{28.65 \pm 0.45}$ | $\mathbf{21.43}$ | $32.45$ |
 
 ---
 
