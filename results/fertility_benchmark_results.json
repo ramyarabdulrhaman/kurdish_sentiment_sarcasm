@@ -1,0 +1,50 @@
+{
+  "mBERT (bert-base-multilingual-cased)": {
+    "raw": {
+      "subwords_per_word_mean": 1.8597435541172054,
+      "subwords_per_word_std": 0.4524227751369385,
+      "subwords_per_100char_mean": 35.50869002693351,
+      "subwords_per_100char_std": 9.355533479229214,
+      "truncation_rate_at_128": 0.0
+    },
+    "with_codn": {
+      "subwords_per_word_mean": 1.6213405410291517,
+      "subwords_per_word_std": 0.38638077168779006,
+      "subwords_per_100char_mean": 30.66990743134931,
+      "subwords_per_100char_std": 7.183795403707114,
+      "truncation_rate_at_128": 0.0
+    }
+  },
+  "XLM-RoBERTa (xlm-roberta-base)": {
+    "raw": {
+      "subwords_per_word_mean": 2.765726739382634,
+      "subwords_per_word_std": 0.6787320171102548,
+      "subwords_per_100char_mean": 51.19689563031756,
+      "subwords_per_100char_std": 6.530879433887155,
+      "truncation_rate_at_128": 0.19723865877712032
+    },
+    "with_codn": {
+      "subwords_per_word_mean": 2.8279487244720225,
+      "subwords_per_word_std": 0.6257349359965062,
+      "subwords_per_100char_mean": 52.53940617912928,
+      "subwords_per_100char_std": 5.680653564613879,
+      "truncation_rate_at_128": 0.19723865877712032
+    }
+  },
+  "KuBERT (asosoft/KuBERT-Central-Kurdish-BERT-Model)": {
+    "raw": {
+      "subwords_per_word_mean": 1.4358800325790202,
+      "subwords_per_word_std": 0.29633236669728424,
+      "subwords_per_100char_mean": 27.277461492780002,
+      "subwords_per_100char_std": 5.947691557650192,
+      "truncation_rate_at_128": 0.0
+    },
+    "with_codn": {
+      "subwords_per_word_mean": 1.2887735081314173,
+      "subwords_per_word_std": 0.24173896316992202,
+      "subwords_per_100char_mean": 24.340556702982806,
+      "subwords_per_100char_std": 4.313293209006443,
+      "truncation_rate_at_128": 0.0
+    }
+  }
+}

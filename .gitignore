@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch checkpoints and heavy tensor caches
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+contextual_embeddings/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Manuscript drafts (Strictly excluded)
+*.docx
+*.tex
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+article.pdf

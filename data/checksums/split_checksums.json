@@ -1,0 +1,7 @@
+{
+  "train.csv": "f9a9334581cc91e91e3418ba4d5856c3deb67a4b40c73cf443cc7e22a7c4965f",
+  "val.csv": "4b4f8f6c7768a8ce53364e1d04fb1bdacc84bad8d119e813f64c1af89bfd7e83",
+  "test.csv": "dd26a0be4d96609ccc0fa37340ee66b1212bddce97c012b5279f481445b02837",
+  "official_test_deduplicated.csv": "06eeebceb4000737fb02fcd978dc745425091f5226d0c1dd59051a6fe78863a2",
+  "random_100_linguist_sample.csv": "32a007c8472e4e1567af006a85a8c198d4a610f8055f28e63985d98aa7f72cc5"
+}

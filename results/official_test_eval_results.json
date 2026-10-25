@@ -1,0 +1,30 @@
+{
+  "Majority_Classifier": {
+    "accuracy": 53.69,
+    "macro_f1": 34.93
+  },
+  "TFIDF_LinearSVC_Raw": {
+    "accuracy": 97.02,
+    "macro_f1": 97.0
+  },
+  "TFIDF_LinearSVC_CODN": {
+    "accuracy": 96.52,
+    "macro_f1": 96.5
+  },
+  "FastText_LogReg_Raw": {
+    "accuracy": 95.35,
+    "macro_f1": 95.33
+  },
+  "FastText_LogReg_CODN": {
+    "accuracy": 95.76,
+    "macro_f1": 95.74
+  },
+  "KuBERT_CODN": {
+    "accuracy": 84.34,
+    "macro_f1": 84.31
+  },
+  "KurdDialect_Transformer": {
+    "accuracy": 84.09,
+    "macro_f1": 84.06
+  }
+}

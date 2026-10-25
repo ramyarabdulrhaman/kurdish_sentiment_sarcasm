@@ -1,0 +1,79 @@
+{
+  "total_raw": 7987,
+  "exact_duplicates_removed": 252,
+  "minhash_near_duplicates_removed": 134,
+  "clean_dataset_size": 7601,
+  "splits": {
+    "train": {
+      "size": 5320,
+      "sentiment": {
+        "1": 2746,
+        "0": 2574
+      },
+      "sarcasm": {
+        "0": 5287,
+        "1": 33
+      },
+      "dialect": {
+        "General": 5130,
+        "Hawleri": 124,
+        "Sulemani": 66
+      },
+      "sha256": "1d0bc5b2f13f09a3a4cfe1d637ec472ddfcc7e1b785652782a4fdc2bfceba701"
+    },
+    "val": {
+      "size": 760,
+      "sentiment": {
+        "1": 392,
+        "0": 368
+      },
+      "sarcasm": {
+        "0": 755,
+        "1": 5
+      },
+      "dialect": {
+        "General": 732,
+        "Hawleri": 18,
+        "Sulemani": 10
+      },
+      "sha256": "93672a673048729c360fc5a4f1ae8c39f8f5a5762bf5b0aa32a1c04224aabc04"
+    },
+    "test": {
+      "size": 1521,
+      "sentiment": {
+        "1": 784,
+        "0": 737
+      },
+      "sarcasm": {
+        "0": 1510,
+        "1": 11
+      },
+      "sarcasm_type": {
+        "none": 1510,
+        "non_idiom": 11
+      },
+      "dialect": {
+        "General": 1467,
+        "Hawleri": 34,
+        "Sulemani": 20
+      },
+      "sha256": "7bfeb2151b7a08c8003048d64144ab7a69d0c39634c9d2a1597d0dd15c654666"
+    }
+  },
+  "annotation": {
+    "candidates_count": 383,
+    "krippendorff_alpha_candidates": 0.9310810810810811,
+    "krippendorff_alpha_candidates_ci": [
+      0.8687821612349914,
+      0.9784701114488349
+    ],
+    "krippendorff_alpha_corpus": 0.9396066746126341,
+    "krippendorff_alpha_corpus_ci": [
+      0.8882345156167284,
+      0.981686866009686
+    ],
+    "adjudicated_sarcastic_total": 49,
+    "idiom_sarcasm_total": 1,
+    "non_idiom_sarcasm_total": 48
+  }
+}

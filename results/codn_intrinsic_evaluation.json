@@ -1,0 +1,36 @@
+{
+  "total_items": 500,
+  "overall_accuracy": 98.0,
+  "category_breakdown": {
+    "glyph_harmonization": {
+      "total": 100,
+      "correct": 100,
+      "accuracy": 100.0
+    },
+    "positional_heh": {
+      "total": 100,
+      "correct": 100,
+      "accuracy": 100.0
+    },
+    "digit_standardization": {
+      "total": 80,
+      "correct": 80,
+      "accuracy": 100.0
+    },
+    "spaced_root_merge": {
+      "total": 70,
+      "correct": 70,
+      "accuracy": 100.0
+    },
+    "prefix_binding": {
+      "total": 80,
+      "correct": 80,
+      "accuracy": 100.0
+    },
+    "elongation_reduction": {
+      "total": 70,
+      "correct": 60,
+      "accuracy": 85.71
+    }
+  }
+}

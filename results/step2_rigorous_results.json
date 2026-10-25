@@ -1,0 +1,2126 @@
+{
+  "metadata": {
+    "seeds": [
+      42,
+      101,
+      2024,
+      777,
+      999
+    ],
+    "train_n": 5320,
+    "val_n": 760,
+    "test_n": 1521
+  },
+  "models": {
+    "Majority_Classifier": {
+      "has_sarcasm_head": false,
+      "accuracy_mean": 51.55,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        49.05,
+        54.04
+      ],
+      "macro_f1_mean": 34.01,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        32.91,
+        35.08
+      ],
+      "sent_acc_on_sarc_mean": 0.0,
+      "polarity_inversion_rate_mean": 100.0,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 51.55,
+          "macro_f1": 34.01,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 0.0,
+          "polarity_inversion_rate": 100.0
+        },
+        {
+          "seed": 101,
+          "accuracy": 51.55,
+          "macro_f1": 34.01,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 0.0,
+          "polarity_inversion_rate": 100.0
+        },
+        {
+          "seed": 2024,
+          "accuracy": 51.55,
+          "macro_f1": 34.01,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 0.0,
+          "polarity_inversion_rate": 100.0
+        },
+        {
+          "seed": 777,
+          "accuracy": 51.55,
+          "macro_f1": 34.01,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 0.0,
+          "polarity_inversion_rate": 100.0
+        },
+        {
+          "seed": 999,
+          "accuracy": 51.55,
+          "macro_f1": 34.01,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 0.0,
+          "polarity_inversion_rate": 100.0
+        }
+      ],
+      "sarcasm_f1_mean": "N/A",
+      "sarcasm_f1_std": "N/A",
+      "sarcasm_f1_item_ci": "N/A",
+      "sarcasm_prauc_mean": "N/A",
+      "sarcasm_prauc_std": "N/A"
+    },
+    "Always_Sarcastic_Baseline": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 48.45,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        45.96,
+        50.95
+      ],
+      "macro_f1_mean": 32.64,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        31.49,
+        33.75
+      ],
+      "sent_acc_on_sarc_mean": 100.0,
+      "polarity_inversion_rate_mean": 0.0,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 48.45,
+          "macro_f1": 32.64,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 101,
+          "accuracy": 48.45,
+          "macro_f1": 32.64,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 2024,
+          "accuracy": 48.45,
+          "macro_f1": 32.64,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 777,
+          "accuracy": 48.45,
+          "macro_f1": 32.64,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 999,
+          "accuracy": 48.45,
+          "macro_f1": 32.64,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        }
+      ],
+      "sarcasm_f1_mean": 13.72,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        11.52,
+        15.97
+      ],
+      "sarcasm_prauc_mean": 53.68,
+      "sarcasm_prauc_std": 0.0
+    },
+    "TFIDF_LinearSVC_Raw": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.66,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        89.22,
+        92.11
+      ],
+      "macro_f1_mean": 90.66,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        89.2,
+        92.09
+      ],
+      "sent_acc_on_sarc_mean": 46.43,
+      "polarity_inversion_rate_mean": 53.57,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.66,
+          "macro_f1": 90.66,
+          "sarcasm_f1": 26.93,
+          "sarcasm_prauc": 18.85,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.66,
+          "macro_f1": 90.66,
+          "sarcasm_f1": 26.93,
+          "sarcasm_prauc": 18.85,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.66,
+          "macro_f1": 90.66,
+          "sarcasm_f1": 26.93,
+          "sarcasm_prauc": 18.85,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.66,
+          "macro_f1": 90.66,
+          "sarcasm_f1": 26.93,
+          "sarcasm_prauc": 18.85,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.66,
+          "macro_f1": 90.66,
+          "sarcasm_f1": 26.93,
+          "sarcasm_prauc": 18.85,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        }
+      ],
+      "sarcasm_f1_mean": 26.93,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        22.05,
+        31.78
+      ],
+      "sarcasm_prauc_mean": 18.85,
+      "sarcasm_prauc_std": 0.0
+    },
+    "TFIDF_LinearSVC_CODN": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.34,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        88.82,
+        91.85
+      ],
+      "macro_f1_mean": 90.33,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        88.81,
+        91.84
+      ],
+      "sent_acc_on_sarc_mean": 48.21,
+      "polarity_inversion_rate_mean": 51.79,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.34,
+          "macro_f1": 90.33,
+          "sarcasm_f1": 25.29,
+          "sarcasm_prauc": 16.67,
+          "sent_acc_on_sarc": 48.21,
+          "polarity_inversion_rate": 51.79
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.34,
+          "macro_f1": 90.33,
+          "sarcasm_f1": 25.29,
+          "sarcasm_prauc": 16.67,
+          "sent_acc_on_sarc": 48.21,
+          "polarity_inversion_rate": 51.79
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.34,
+          "macro_f1": 90.33,
+          "sarcasm_f1": 25.29,
+          "sarcasm_prauc": 16.67,
+          "sent_acc_on_sarc": 48.21,
+          "polarity_inversion_rate": 51.79
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.34,
+          "macro_f1": 90.33,
+          "sarcasm_f1": 25.29,
+          "sarcasm_prauc": 16.67,
+          "sent_acc_on_sarc": 48.21,
+          "polarity_inversion_rate": 51.79
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.34,
+          "macro_f1": 90.33,
+          "sarcasm_f1": 25.29,
+          "sarcasm_prauc": 16.67,
+          "sent_acc_on_sarc": 48.21,
+          "polarity_inversion_rate": 51.79
+        }
+      ],
+      "sarcasm_f1_mean": 25.29,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        20.64,
+        29.92
+      ],
+      "sarcasm_prauc_mean": 16.67,
+      "sarcasm_prauc_std": 0.0
+    },
+    "FastText_LogReg_Raw": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.81,
+      "accuracy_std": 0.05,
+      "accuracy_item_ci": [
+        89.22,
+        92.18
+      ],
+      "macro_f1_mean": 90.81,
+      "macro_f1_std": 0.05,
+      "macro_f1_item_ci": [
+        89.22,
+        92.17
+      ],
+      "sent_acc_on_sarc_mean": 46.25,
+      "polarity_inversion_rate_mean": 53.75,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 23.98,
+          "sarcasm_prauc": 16.43,
+          "sent_acc_on_sarc": 45.54,
+          "polarity_inversion_rate": 54.46
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.86,
+          "macro_f1": 90.86,
+          "sarcasm_f1": 22.64,
+          "sarcasm_prauc": 15.49,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.86,
+          "macro_f1": 90.86,
+          "sarcasm_f1": 23.27,
+          "sarcasm_prauc": 17.75,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.8,
+          "macro_f1": 90.79,
+          "sarcasm_f1": 23.17,
+          "sarcasm_prauc": 18.11,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.8,
+          "macro_f1": 90.79,
+          "sarcasm_f1": 29.15,
+          "sarcasm_prauc": 18.08,
+          "sent_acc_on_sarc": 46.43,
+          "polarity_inversion_rate": 53.57
+        }
+      ],
+      "sarcasm_f1_mean": 24.44,
+      "sarcasm_f1_std": 2.39,
+      "sarcasm_f1_item_ci": [
+        19.91,
+        28.07
+      ],
+      "sarcasm_prauc_mean": 17.17,
+      "sarcasm_prauc_std": 1.04
+    },
+    "FastText_LogReg_CODN": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.93,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        89.41,
+        92.37
+      ],
+      "macro_f1_mean": 90.93,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        89.41,
+        92.37
+      ],
+      "sent_acc_on_sarc_mean": 53.57,
+      "polarity_inversion_rate_mean": 46.43,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.93,
+          "macro_f1": 90.93,
+          "sarcasm_f1": 21.38,
+          "sarcasm_prauc": 15.45,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.93,
+          "macro_f1": 90.93,
+          "sarcasm_f1": 23.04,
+          "sarcasm_prauc": 15.16,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.93,
+          "macro_f1": 90.93,
+          "sarcasm_f1": 22.68,
+          "sarcasm_prauc": 14.76,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.93,
+          "macro_f1": 90.93,
+          "sarcasm_f1": 22.06,
+          "sarcasm_prauc": 13.78,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.93,
+          "macro_f1": 90.93,
+          "sarcasm_f1": 24.62,
+          "sarcasm_prauc": 18.01,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        }
+      ],
+      "sarcasm_f1_mean": 22.76,
+      "sarcasm_f1_std": 1.09,
+      "sarcasm_f1_item_ci": [
+        17.28,
+        25.43
+      ],
+      "sarcasm_prauc_mean": 15.43,
+      "sarcasm_prauc_std": 1.41
+    },
+    "Translate_then_Classify": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.73,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        89.22,
+        92.18
+      ],
+      "macro_f1_mean": 90.73,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        89.22,
+        92.17
+      ],
+      "sent_acc_on_sarc_mean": 49.11,
+      "polarity_inversion_rate_mean": 50.89,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 53.68,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        }
+      ],
+      "sarcasm_f1_mean": 0.0,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        0.0,
+        0.0
+      ],
+      "sarcasm_prauc_mean": 53.68,
+      "sarcasm_prauc_std": 0.0
+    },
+    "Few_Shot_LLM_Llama3": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 90.73,
+      "accuracy_std": 0.0,
+      "accuracy_item_ci": [
+        89.22,
+        92.18
+      ],
+      "macro_f1_mean": 90.73,
+      "macro_f1_std": 0.0,
+      "macro_f1_item_ci": [
+        89.22,
+        92.17
+      ],
+      "sent_acc_on_sarc_mean": 47.32,
+      "polarity_inversion_rate_mean": 52.68,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 17.46,
+          "sent_acc_on_sarc": 47.32,
+          "polarity_inversion_rate": 52.68
+        },
+        {
+          "seed": 101,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 17.46,
+          "sent_acc_on_sarc": 47.32,
+          "polarity_inversion_rate": 52.68
+        },
+        {
+          "seed": 2024,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 17.46,
+          "sent_acc_on_sarc": 47.32,
+          "polarity_inversion_rate": 52.68
+        },
+        {
+          "seed": 777,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 17.46,
+          "sent_acc_on_sarc": 47.32,
+          "polarity_inversion_rate": 52.68
+        },
+        {
+          "seed": 999,
+          "accuracy": 90.73,
+          "macro_f1": 90.73,
+          "sarcasm_f1": 0.0,
+          "sarcasm_prauc": 17.46,
+          "sent_acc_on_sarc": 47.32,
+          "polarity_inversion_rate": 52.68
+        }
+      ],
+      "sarcasm_f1_mean": 0.0,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        0.0,
+        0.0
+      ],
+      "sarcasm_prauc_mean": 17.46,
+      "sarcasm_prauc_std": 0.0
+    },
+    "mBERT_Raw": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 67.2,
+      "accuracy_std": 0.53,
+      "accuracy_item_ci": [
+        64.17,
+        68.9
+      ],
+      "macro_f1_mean": 66.98,
+      "macro_f1_std": 0.57,
+      "macro_f1_item_ci": [
+        63.91,
+        68.63
+      ],
+      "sent_acc_on_sarc_mean": 52.32,
+      "polarity_inversion_rate_mean": 47.68,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 66.54,
+          "macro_f1": 66.29,
+          "sarcasm_f1": 12.35,
+          "sarcasm_prauc": 9.89,
+          "sent_acc_on_sarc": 50.89,
+          "polarity_inversion_rate": 49.11
+        },
+        {
+          "seed": 101,
+          "accuracy": 66.8,
+          "macro_f1": 66.64,
+          "sarcasm_f1": 12.83,
+          "sarcasm_prauc": 10.36,
+          "sent_acc_on_sarc": 54.46,
+          "polarity_inversion_rate": 45.54
+        },
+        {
+          "seed": 2024,
+          "accuracy": 67.46,
+          "macro_f1": 67.22,
+          "sarcasm_f1": 13.26,
+          "sarcasm_prauc": 10.18,
+          "sent_acc_on_sarc": 50.89,
+          "polarity_inversion_rate": 49.11
+        },
+        {
+          "seed": 777,
+          "accuracy": 68.05,
+          "macro_f1": 67.95,
+          "sarcasm_f1": 11.62,
+          "sarcasm_prauc": 9.52,
+          "sent_acc_on_sarc": 55.36,
+          "polarity_inversion_rate": 44.64
+        },
+        {
+          "seed": 999,
+          "accuracy": 67.13,
+          "macro_f1": 66.82,
+          "sarcasm_f1": 13.45,
+          "sarcasm_prauc": 10.38,
+          "sent_acc_on_sarc": 50.0,
+          "polarity_inversion_rate": 50.0
+        }
+      ],
+      "sarcasm_f1_mean": 12.7,
+      "sarcasm_f1_std": 0.66,
+      "sarcasm_f1_item_ci": [
+        8.74,
+        16.05
+      ],
+      "sarcasm_prauc_mean": 10.07,
+      "sarcasm_prauc_std": 0.32
+    },
+    "mBERT_CODN": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 68.28,
+      "accuracy_std": 0.56,
+      "accuracy_item_ci": [
+        65.22,
+        70.02
+      ],
+      "macro_f1_mean": 68.19,
+      "macro_f1_std": 0.65,
+      "macro_f1_item_ci": [
+        65.02,
+        69.79
+      ],
+      "sent_acc_on_sarc_mean": 54.29,
+      "polarity_inversion_rate_mean": 45.71,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 67.59,
+          "macro_f1": 67.38,
+          "sarcasm_f1": 10.18,
+          "sarcasm_prauc": 8.92,
+          "sent_acc_on_sarc": 49.11,
+          "polarity_inversion_rate": 50.89
+        },
+        {
+          "seed": 101,
+          "accuracy": 68.57,
+          "macro_f1": 68.54,
+          "sarcasm_f1": 9.97,
+          "sarcasm_prauc": 9.71,
+          "sent_acc_on_sarc": 56.25,
+          "polarity_inversion_rate": 43.75
+        },
+        {
+          "seed": 2024,
+          "accuracy": 68.44,
+          "macro_f1": 68.43,
+          "sarcasm_f1": 10.88,
+          "sarcasm_prauc": 9.58,
+          "sent_acc_on_sarc": 57.14,
+          "polarity_inversion_rate": 42.86
+        },
+        {
+          "seed": 777,
+          "accuracy": 69.1,
+          "macro_f1": 69.09,
+          "sarcasm_f1": 10.89,
+          "sarcasm_prauc": 8.98,
+          "sent_acc_on_sarc": 58.04,
+          "polarity_inversion_rate": 41.96
+        },
+        {
+          "seed": 999,
+          "accuracy": 67.72,
+          "macro_f1": 67.51,
+          "sarcasm_f1": 10.79,
+          "sarcasm_prauc": 9.6,
+          "sent_acc_on_sarc": 50.89,
+          "polarity_inversion_rate": 49.11
+        }
+      ],
+      "sarcasm_f1_mean": 10.54,
+      "sarcasm_f1_std": 0.39,
+      "sarcasm_f1_item_ci": [
+        5.49,
+        15.22
+      ],
+      "sarcasm_prauc_mean": 9.36,
+      "sarcasm_prauc_std": 0.34
+    },
+    "XLM_RoBERTa_Raw": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 63.87,
+      "accuracy_std": 0.65,
+      "accuracy_item_ci": [
+        61.87,
+        66.6
+      ],
+      "macro_f1_mean": 63.05,
+      "macro_f1_std": 0.46,
+      "macro_f1_item_ci": [
+        60.91,
+        65.71
+      ],
+      "sent_acc_on_sarc_mean": 45.89,
+      "polarity_inversion_rate_mean": 54.11,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 64.23,
+          "macro_f1": 63.33,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.29,
+          "sent_acc_on_sarc": 45.54,
+          "polarity_inversion_rate": 54.46
+        },
+        {
+          "seed": 101,
+          "accuracy": 64.17,
+          "macro_f1": 63.3,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 9.52,
+          "sent_acc_on_sarc": 42.86,
+          "polarity_inversion_rate": 57.14
+        },
+        {
+          "seed": 2024,
+          "accuracy": 64.37,
+          "macro_f1": 63.61,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 8.97,
+          "sent_acc_on_sarc": 44.64,
+          "polarity_inversion_rate": 55.36
+        },
+        {
+          "seed": 777,
+          "accuracy": 62.59,
+          "macro_f1": 62.59,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.26,
+          "sent_acc_on_sarc": 58.04,
+          "polarity_inversion_rate": 41.96
+        },
+        {
+          "seed": 999,
+          "accuracy": 63.97,
+          "macro_f1": 62.42,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.08,
+          "sent_acc_on_sarc": 38.39,
+          "polarity_inversion_rate": 61.61
+        }
+      ],
+      "sarcasm_f1_mean": 13.72,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        11.52,
+        15.97
+      ],
+      "sarcasm_prauc_mean": 9.82,
+      "sarcasm_prauc_std": 0.51
+    },
+    "XLM_RoBERTa_CODN": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 55.69,
+      "accuracy_std": 3.58,
+      "accuracy_item_ci": [
+        50.43,
+        55.36
+      ],
+      "macro_f1_mean": 45.61,
+      "macro_f1_std": 8.37,
+      "macro_f1_item_ci": [
+        36.66,
+        40.43
+      ],
+      "sent_acc_on_sarc_mean": 20.0,
+      "polarity_inversion_rate_mean": 80.0,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 52.93,
+          "macro_f1": 38.58,
+          "sarcasm_f1": 13.73,
+          "sarcasm_prauc": 10.21,
+          "sent_acc_on_sarc": 2.68,
+          "polarity_inversion_rate": 97.32
+        },
+        {
+          "seed": 101,
+          "accuracy": 52.99,
+          "macro_f1": 41.25,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 9.79,
+          "sent_acc_on_sarc": 6.25,
+          "polarity_inversion_rate": 93.75
+        },
+        {
+          "seed": 2024,
+          "accuracy": 58.32,
+          "macro_f1": 51.02,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.28,
+          "sent_acc_on_sarc": 10.71,
+          "polarity_inversion_rate": 89.29
+        },
+        {
+          "seed": 777,
+          "accuracy": 61.47,
+          "macro_f1": 59.43,
+          "sarcasm_f1": 13.58,
+          "sarcasm_prauc": 10.21,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
+        },
+        {
+          "seed": 999,
+          "accuracy": 52.73,
+          "macro_f1": 37.75,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.19,
+          "sent_acc_on_sarc": 1.79,
+          "polarity_inversion_rate": 98.21
+        }
+      ],
+      "sarcasm_f1_mean": 13.69,
+      "sarcasm_f1_std": 0.06,
+      "sarcasm_f1_item_ci": [
+        11.52,
+        16.0
+      ],
+      "sarcasm_prauc_mean": 10.14,
+      "sarcasm_prauc_std": 0.18
+    },
+    "XLM_RoBERTa_large": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 53.35,
+      "accuracy_std": 2.23,
+      "accuracy_item_ci": [
+        49.57,
+        54.57
+      ],
+      "macro_f1_mean": 39.42,
+      "macro_f1_std": 4.66,
+      "macro_f1_item_ci": [
+        34.65,
+        37.82
+      ],
+      "sent_acc_on_sarc_mean": 4.11,
+      "polarity_inversion_rate_mean": 95.89,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 52.07,
+          "macro_f1": 36.23,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.68,
+          "sent_acc_on_sarc": 1.79,
+          "polarity_inversion_rate": 98.21
+        },
+        {
+          "seed": 101,
+          "accuracy": 57.73,
+          "macro_f1": 48.42,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.47,
+          "sent_acc_on_sarc": 8.93,
+          "polarity_inversion_rate": 91.07
+        },
+        {
+          "seed": 2024,
+          "accuracy": 51.87,
+          "macro_f1": 38.71,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.51,
+          "sent_acc_on_sarc": 3.57,
+          "polarity_inversion_rate": 96.43
+        },
+        {
+          "seed": 777,
+          "accuracy": 52.07,
+          "macro_f1": 35.44,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.4,
+          "sent_acc_on_sarc": 2.68,
+          "polarity_inversion_rate": 97.32
+        },
+        {
+          "seed": 999,
+          "accuracy": 52.99,
+          "macro_f1": 38.31,
+          "sarcasm_f1": 13.72,
+          "sarcasm_prauc": 10.67,
+          "sent_acc_on_sarc": 3.57,
+          "polarity_inversion_rate": 96.43
+        }
+      ],
+      "sarcasm_f1_mean": 13.72,
+      "sarcasm_f1_std": 0.0,
+      "sarcasm_f1_item_ci": [
+        11.52,
+        15.97
+      ],
+      "sarcasm_prauc_mean": 10.55,
+      "sarcasm_prauc_std": 0.11
+    },
+    "LaBSE_CODN": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 70.74,
+      "accuracy_std": 0.25,
+      "accuracy_item_ci": [
+        68.05,
+        72.72
+      ],
+      "macro_f1_mean": 70.7,
+      "macro_f1_std": 0.28,
+      "macro_f1_item_ci": [
+        67.92,
+        72.59
+      ],
+      "sent_acc_on_sarc_mean": 58.22,
+      "polarity_inversion_rate_mean": 41.78,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 70.35,
+          "macro_f1": 70.26,
+          "sarcasm_f1": 9.92,
+          "sarcasm_prauc": 14.78,
+          "sent_acc_on_sarc": 56.25,
+          "polarity_inversion_rate": 43.75
+        },
+        {
+          "seed": 101,
+          "accuracy": 71.14,
+          "macro_f1": 71.12,
+          "sarcasm_f1": 13.82,
+          "sarcasm_prauc": 11.94,
+          "sent_acc_on_sarc": 58.04,
+          "polarity_inversion_rate": 41.96
+        },
+        {
+          "seed": 2024,
+          "accuracy": 70.68,
+          "macro_f1": 70.67,
+          "sarcasm_f1": 13.79,
+          "sarcasm_prauc": 12.94,
+          "sent_acc_on_sarc": 58.04,
+          "polarity_inversion_rate": 41.96
+        },
+        {
+          "seed": 777,
+          "accuracy": 70.81,
+          "macro_f1": 70.8,
+          "sarcasm_f1": 11.74,
+          "sarcasm_prauc": 10.38,
+          "sent_acc_on_sarc": 64.29,
+          "polarity_inversion_rate": 35.71
+        },
+        {
+          "seed": 999,
+          "accuracy": 70.74,
+          "macro_f1": 70.63,
+          "sarcasm_f1": 13.42,
+          "sarcasm_prauc": 12.8,
+          "sent_acc_on_sarc": 54.46,
+          "polarity_inversion_rate": 45.54
+        }
+      ],
+      "sarcasm_f1_mean": 12.54,
+      "sarcasm_f1_std": 1.52,
+      "sarcasm_f1_item_ci": [
+        3.23,
+        17.46
+      ],
+      "sarcasm_prauc_mean": 12.57,
+      "sarcasm_prauc_std": 1.43
+    },
+    "KuBERT_Raw": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 71.32,
+      "accuracy_std": 0.85,
+      "accuracy_item_ci": [
+        69.69,
+        74.23
+      ],
+      "macro_f1_mean": 71.31,
+      "macro_f1_std": 0.86,
+      "macro_f1_item_ci": [
+        69.66,
+        74.16
+      ],
+      "sent_acc_on_sarc_mean": 66.25,
+      "polarity_inversion_rate_mean": 33.75,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 71.93,
+          "macro_f1": 71.92,
+          "sarcasm_f1": 15.38,
+          "sarcasm_prauc": 10.42,
+          "sent_acc_on_sarc": 66.96,
+          "polarity_inversion_rate": 33.04
+        },
+        {
+          "seed": 101,
+          "accuracy": 69.63,
+          "macro_f1": 69.6,
+          "sarcasm_f1": 18.53,
+          "sarcasm_prauc": 10.77,
+          "sent_acc_on_sarc": 61.61,
+          "polarity_inversion_rate": 38.39
+        },
+        {
+          "seed": 2024,
+          "accuracy": 71.66,
+          "macro_f1": 71.66,
+          "sarcasm_f1": 17.0,
+          "sarcasm_prauc": 11.22,
+          "sent_acc_on_sarc": 64.29,
+          "polarity_inversion_rate": 35.71
+        },
+        {
+          "seed": 777,
+          "accuracy": 71.66,
+          "macro_f1": 71.66,
+          "sarcasm_f1": 17.19,
+          "sarcasm_prauc": 10.17,
+          "sent_acc_on_sarc": 68.75,
+          "polarity_inversion_rate": 31.25
+        },
+        {
+          "seed": 999,
+          "accuracy": 71.73,
+          "macro_f1": 71.72,
+          "sarcasm_f1": 17.24,
+          "sarcasm_prauc": 10.93,
+          "sent_acc_on_sarc": 69.64,
+          "polarity_inversion_rate": 30.36
+        }
+      ],
+      "sarcasm_f1_mean": 17.07,
+      "sarcasm_f1_std": 1.0,
+      "sarcasm_f1_item_ci": [
+        10.37,
+        20.53
+      ],
+      "sarcasm_prauc_mean": 10.7,
+      "sarcasm_prauc_std": 0.37
+    },
+    "KuBERT_CODN": {
+      "has_sarcasm_head": false,
+      "accuracy_mean": 72.01,
+      "accuracy_std": 0.6,
+      "accuracy_item_ci": [
+        69.76,
+        74.23
+      ],
+      "macro_f1_mean": 71.96,
+      "macro_f1_std": 0.59,
+      "macro_f1_item_ci": [
+        69.69,
+        74.21
+      ],
+      "sent_acc_on_sarc_mean": 67.32,
+      "polarity_inversion_rate_mean": 32.68,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 71.99,
+          "macro_f1": 71.97,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 66.96,
+          "polarity_inversion_rate": 33.04
+        },
+        {
+          "seed": 101,
+          "accuracy": 70.94,
+          "macro_f1": 70.94,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 63.39,
+          "polarity_inversion_rate": 36.61
+        },
+        {
+          "seed": 2024,
+          "accuracy": 72.78,
+          "macro_f1": 72.76,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 66.96,
+          "polarity_inversion_rate": 33.04
+        },
+        {
+          "seed": 777,
+          "accuracy": 72.06,
+          "macro_f1": 72.0,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 999,
+          "accuracy": 72.26,
+          "macro_f1": 72.15,
+          "sarcasm_f1": "N/A",
+          "sarcasm_prauc": "N/A",
+          "sent_acc_on_sarc": 71.43,
+          "polarity_inversion_rate": 28.57
+        }
+      ],
+      "sarcasm_f1_mean": "N/A",
+      "sarcasm_f1_std": "N/A",
+      "sarcasm_f1_item_ci": "N/A",
+      "sarcasm_prauc_mean": "N/A",
+      "sarcasm_prauc_std": "N/A"
+    },
+    "Control_KuBERT_ExtraAttention_NoGating": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 77.05,
+      "accuracy_std": 0.67,
+      "accuracy_item_ci": [
+        74.88,
+        79.09
+      ],
+      "macro_f1_mean": 76.91,
+      "macro_f1_std": 0.65,
+      "macro_f1_item_ci": [
+        74.65,
+        78.88
+      ],
+      "sent_acc_on_sarc_mean": 70.71,
+      "polarity_inversion_rate_mean": 29.29,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 76.99,
+          "macro_f1": 76.76,
+          "sarcasm_f1": 16.38,
+          "sarcasm_prauc": 9.74,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
+        },
+        {
+          "seed": 101,
+          "accuracy": 75.87,
+          "macro_f1": 75.83,
+          "sarcasm_f1": 17.05,
+          "sarcasm_prauc": 10.3,
+          "sent_acc_on_sarc": 53.57,
+          "polarity_inversion_rate": 46.43
+        },
+        {
+          "seed": 2024,
+          "accuracy": 77.38,
+          "macro_f1": 77.27,
+          "sarcasm_f1": 15.06,
+          "sarcasm_prauc": 10.27,
+          "sent_acc_on_sarc": 72.32,
+          "polarity_inversion_rate": 27.68
+        },
+        {
+          "seed": 777,
+          "accuracy": 77.12,
+          "macro_f1": 76.9,
+          "sarcasm_f1": 13.73,
+          "sarcasm_prauc": 9.34,
+          "sent_acc_on_sarc": 75.89,
+          "polarity_inversion_rate": 24.11
+        },
+        {
+          "seed": 999,
+          "accuracy": 77.91,
+          "macro_f1": 77.81,
+          "sarcasm_f1": 14.84,
+          "sarcasm_prauc": 9.77,
+          "sent_acc_on_sarc": 73.21,
+          "polarity_inversion_rate": 26.79
+        }
+      ],
+      "sarcasm_f1_mean": 15.41,
+      "sarcasm_f1_std": 1.17,
+      "sarcasm_f1_item_ci": [
+        11.26,
+        21.65
+      ],
+      "sarcasm_prauc_mean": 9.88,
+      "sarcasm_prauc_std": 0.36
+    },
+    "Control_KuBERT_DGSA_Gated": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 77.54,
+      "accuracy_std": 0.96,
+      "accuracy_item_ci": [
+        76.53,
+        80.67
+      ],
+      "macro_f1_mean": 77.48,
+      "macro_f1_std": 0.99,
+      "macro_f1_item_ci": [
+        76.5,
+        80.64
+      ],
+      "sent_acc_on_sarc_mean": 61.25,
+      "polarity_inversion_rate_mean": 38.75,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 78.63,
+          "macro_f1": 78.59,
+          "sarcasm_f1": 9.73,
+          "sarcasm_prauc": 9.16,
+          "sent_acc_on_sarc": 66.07,
+          "polarity_inversion_rate": 33.93
+        },
+        {
+          "seed": 101,
+          "accuracy": 76.0,
+          "macro_f1": 75.91,
+          "sarcasm_f1": 15.67,
+          "sarcasm_prauc": 9.13,
+          "sent_acc_on_sarc": 50.0,
+          "polarity_inversion_rate": 50.0
+        },
+        {
+          "seed": 2024,
+          "accuracy": 76.92,
+          "macro_f1": 76.76,
+          "sarcasm_f1": 10.94,
+          "sarcasm_prauc": 9.17,
+          "sent_acc_on_sarc": 75.0,
+          "polarity_inversion_rate": 25.0
+        },
+        {
+          "seed": 777,
+          "accuracy": 77.91,
+          "macro_f1": 77.91,
+          "sarcasm_f1": 6.67,
+          "sarcasm_prauc": 9.64,
+          "sent_acc_on_sarc": 58.04,
+          "polarity_inversion_rate": 41.96
+        },
+        {
+          "seed": 999,
+          "accuracy": 78.24,
+          "macro_f1": 78.22,
+          "sarcasm_f1": 12.61,
+          "sarcasm_prauc": 9.52,
+          "sent_acc_on_sarc": 57.14,
+          "polarity_inversion_rate": 42.86
+        }
+      ],
+      "sarcasm_f1_mean": 11.12,
+      "sarcasm_f1_std": 2.99,
+      "sarcasm_f1_item_ci": [
+        4.65,
+        15.38
+      ],
+      "sarcasm_prauc_mean": 9.32,
+      "sarcasm_prauc_std": 0.21
+    },
+    "Control_KuBERT_Dialect_Token_Prefix": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 71.99,
+      "accuracy_std": 0.31,
+      "accuracy_item_ci": [
+        69.89,
+        74.29
+      ],
+      "macro_f1_mean": 71.92,
+      "macro_f1_std": 0.31,
+      "macro_f1_item_ci": [
+        69.77,
+        74.23
+      ],
+      "sent_acc_on_sarc_mean": 70.36,
+      "polarity_inversion_rate_mean": 29.64,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 72.12,
+          "macro_f1": 72.05,
+          "sarcasm_f1": 14.92,
+          "sarcasm_prauc": 9.0,
+          "sent_acc_on_sarc": 71.43,
+          "polarity_inversion_rate": 28.57
+        },
+        {
+          "seed": 101,
+          "accuracy": 72.52,
+          "macro_f1": 72.44,
+          "sarcasm_f1": 14.62,
+          "sarcasm_prauc": 8.83,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 2024,
+          "accuracy": 71.79,
+          "macro_f1": 71.79,
+          "sarcasm_f1": 14.19,
+          "sarcasm_prauc": 9.4,
+          "sent_acc_on_sarc": 68.75,
+          "polarity_inversion_rate": 31.25
+        },
+        {
+          "seed": 777,
+          "accuracy": 71.93,
+          "macro_f1": 71.85,
+          "sarcasm_f1": 13.05,
+          "sarcasm_prauc": 8.81,
+          "sent_acc_on_sarc": 70.54,
+          "polarity_inversion_rate": 29.46
+        },
+        {
+          "seed": 999,
+          "accuracy": 71.6,
+          "macro_f1": 71.49,
+          "sarcasm_f1": 11.56,
+          "sarcasm_prauc": 9.38,
+          "sent_acc_on_sarc": 73.21,
+          "polarity_inversion_rate": 26.79
+        }
+      ],
+      "sarcasm_f1_mean": 13.67,
+      "sarcasm_f1_std": 1.23,
+      "sarcasm_f1_item_ci": [
+        10.67,
+        19.1
+      ],
+      "sarcasm_prauc_mean": 9.08,
+      "sarcasm_prauc_std": 0.26
+    },
+    "Control_KuBERT_Auxiliary_Dialect_Loss": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 71.61,
+      "accuracy_std": 0.54,
+      "accuracy_item_ci": [
+        69.69,
+        74.16
+      ],
+      "macro_f1_mean": 71.6,
+      "macro_f1_std": 0.54,
+      "macro_f1_item_ci": [
+        69.67,
+        74.16
+      ],
+      "sent_acc_on_sarc_mean": 64.64,
+      "polarity_inversion_rate_mean": 35.36,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 71.93,
+          "macro_f1": 71.93,
+          "sarcasm_f1": 13.09,
+          "sarcasm_prauc": 9.01,
+          "sent_acc_on_sarc": 65.18,
+          "polarity_inversion_rate": 34.82
+        },
+        {
+          "seed": 101,
+          "accuracy": 71.99,
+          "macro_f1": 71.98,
+          "sarcasm_f1": 14.35,
+          "sarcasm_prauc": 9.09,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 2024,
+          "accuracy": 72.06,
+          "macro_f1": 72.04,
+          "sarcasm_f1": 15.51,
+          "sarcasm_prauc": 9.82,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 777,
+          "accuracy": 71.47,
+          "macro_f1": 71.45,
+          "sarcasm_f1": 16.01,
+          "sarcasm_prauc": 8.89,
+          "sent_acc_on_sarc": 60.71,
+          "polarity_inversion_rate": 39.29
+        },
+        {
+          "seed": 999,
+          "accuracy": 70.61,
+          "macro_f1": 70.6,
+          "sarcasm_f1": 15.85,
+          "sarcasm_prauc": 9.35,
+          "sent_acc_on_sarc": 61.61,
+          "polarity_inversion_rate": 38.39
+        }
+      ],
+      "sarcasm_f1_mean": 14.96,
+      "sarcasm_f1_std": 1.1,
+      "sarcasm_f1_item_ci": [
+        7.6,
+        18.64
+      ],
+      "sarcasm_prauc_mean": 9.23,
+      "sarcasm_prauc_std": 0.33
+    },
+    "Control_KuBERT_Incongruity_beta0": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 72.05,
+      "accuracy_std": 0.41,
+      "accuracy_item_ci": [
+        70.02,
+        74.49
+      ],
+      "macro_f1_mean": 72.01,
+      "macro_f1_std": 0.41,
+      "macro_f1_item_ci": [
+        70.01,
+        74.44
+      ],
+      "sent_acc_on_sarc_mean": 68.04,
+      "polarity_inversion_rate_mean": 31.96,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 72.26,
+          "macro_f1": 72.23,
+          "sarcasm_f1": 4.91,
+          "sarcasm_prauc": 8.98,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 101,
+          "accuracy": 71.4,
+          "macro_f1": 71.4,
+          "sarcasm_f1": 13.47,
+          "sarcasm_prauc": 9.01,
+          "sent_acc_on_sarc": 65.18,
+          "polarity_inversion_rate": 34.82
+        },
+        {
+          "seed": 2024,
+          "accuracy": 72.65,
+          "macro_f1": 72.63,
+          "sarcasm_f1": 15.14,
+          "sarcasm_prauc": 9.64,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        },
+        {
+          "seed": 777,
+          "accuracy": 71.99,
+          "macro_f1": 71.93,
+          "sarcasm_f1": 12.57,
+          "sarcasm_prauc": 8.75,
+          "sent_acc_on_sarc": 71.43,
+          "polarity_inversion_rate": 28.57
+        },
+        {
+          "seed": 999,
+          "accuracy": 71.93,
+          "macro_f1": 71.87,
+          "sarcasm_f1": 15.12,
+          "sarcasm_prauc": 9.24,
+          "sent_acc_on_sarc": 67.86,
+          "polarity_inversion_rate": 32.14
+        }
+      ],
+      "sarcasm_f1_mean": 12.24,
+      "sarcasm_f1_std": 3.8,
+      "sarcasm_f1_item_ci": [
+        1.15,
+        10.0
+      ],
+      "sarcasm_prauc_mean": 9.12,
+      "sarcasm_prauc_std": 0.3
+    },
+    "Control_KuBERT_Incongruity_beta0_05": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 71.44,
+      "accuracy_std": 0.56,
+      "accuracy_item_ci": [
+        69.56,
+        74.1
+      ],
+      "macro_f1_mean": 71.19,
+      "macro_f1_std": 0.63,
+      "macro_f1_item_ci": [
+        69.36,
+        73.87
+      ],
+      "sent_acc_on_sarc_mean": 75.53,
+      "polarity_inversion_rate_mean": 24.47,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 71.86,
+          "macro_f1": 71.64,
+          "sarcasm_f1": 2.48,
+          "sarcasm_prauc": 8.91,
+          "sent_acc_on_sarc": 75.0,
+          "polarity_inversion_rate": 25.0
+        },
+        {
+          "seed": 101,
+          "accuracy": 71.99,
+          "macro_f1": 71.89,
+          "sarcasm_f1": 13.42,
+          "sarcasm_prauc": 8.98,
+          "sent_acc_on_sarc": 73.21,
+          "polarity_inversion_rate": 26.79
+        },
+        {
+          "seed": 2024,
+          "accuracy": 71.47,
+          "macro_f1": 71.25,
+          "sarcasm_f1": 15.46,
+          "sarcasm_prauc": 9.63,
+          "sent_acc_on_sarc": 75.89,
+          "polarity_inversion_rate": 24.11
+        },
+        {
+          "seed": 777,
+          "accuracy": 70.41,
+          "macro_f1": 70.07,
+          "sarcasm_f1": 12.64,
+          "sarcasm_prauc": 8.74,
+          "sent_acc_on_sarc": 77.68,
+          "polarity_inversion_rate": 22.32
+        },
+        {
+          "seed": 999,
+          "accuracy": 71.47,
+          "macro_f1": 71.12,
+          "sarcasm_f1": 12.3,
+          "sarcasm_prauc": 9.26,
+          "sent_acc_on_sarc": 75.89,
+          "polarity_inversion_rate": 24.11
+        }
+      ],
+      "sarcasm_f1_mean": 11.26,
+      "sarcasm_f1_std": 4.53,
+      "sarcasm_f1_item_ci": [
+        0.0,
+        6.29
+      ],
+      "sarcasm_prauc_mean": 9.1,
+      "sarcasm_prauc_std": 0.31
+    },
+    "Control_KuBERT_Incongruity_beta0_1": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 71.0,
+      "accuracy_std": 0.63,
+      "accuracy_item_ci": [
+        69.43,
+        73.9
+      ],
+      "macro_f1_mean": 70.4,
+      "macro_f1_std": 0.67,
+      "macro_f1_item_ci": [
+        68.86,
+        73.39
+      ],
+      "sent_acc_on_sarc_mean": 83.04,
+      "polarity_inversion_rate_mean": 16.96,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 71.66,
+          "macro_f1": 71.15,
+          "sarcasm_f1": 11.49,
+          "sarcasm_prauc": 8.86,
+          "sent_acc_on_sarc": 83.93,
+          "polarity_inversion_rate": 16.07
+        },
+        {
+          "seed": 101,
+          "accuracy": 70.22,
+          "macro_f1": 69.7,
+          "sarcasm_f1": 13.38,
+          "sarcasm_prauc": 8.95,
+          "sent_acc_on_sarc": 79.46,
+          "polarity_inversion_rate": 20.54
+        },
+        {
+          "seed": 2024,
+          "accuracy": 71.79,
+          "macro_f1": 71.24,
+          "sarcasm_f1": 15.9,
+          "sarcasm_prauc": 9.61,
+          "sent_acc_on_sarc": 83.04,
+          "polarity_inversion_rate": 16.96
+        },
+        {
+          "seed": 777,
+          "accuracy": 70.48,
+          "macro_f1": 69.73,
+          "sarcasm_f1": 13.04,
+          "sarcasm_prauc": 8.73,
+          "sent_acc_on_sarc": 85.71,
+          "polarity_inversion_rate": 14.29
+        },
+        {
+          "seed": 999,
+          "accuracy": 70.87,
+          "macro_f1": 70.16,
+          "sarcasm_f1": 14.72,
+          "sarcasm_prauc": 9.29,
+          "sent_acc_on_sarc": 83.04,
+          "polarity_inversion_rate": 16.96
+        }
+      ],
+      "sarcasm_f1_mean": 13.71,
+      "sarcasm_f1_std": 1.5,
+      "sarcasm_f1_item_ci": [
+        6.3,
+        16.91
+      ],
+      "sarcasm_prauc_mean": 9.09,
+      "sarcasm_prauc_std": 0.32
+    },
+    "Control_KuBERT_Incongruity_beta0_2": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 69.24,
+      "accuracy_std": 0.89,
+      "accuracy_item_ci": [
+        68.38,
+        72.85
+      ],
+      "macro_f1_mean": 67.69,
+      "macro_f1_std": 1.11,
+      "macro_f1_item_ci": [
+        67.01,
+        71.72
+      ],
+      "sent_acc_on_sarc_mean": 90.72,
+      "polarity_inversion_rate_mean": 9.28,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 70.61,
+          "macro_f1": 69.41,
+          "sarcasm_f1": 11.28,
+          "sarcasm_prauc": 8.78,
+          "sent_acc_on_sarc": 90.18,
+          "polarity_inversion_rate": 9.82
+        },
+        {
+          "seed": 101,
+          "accuracy": 69.03,
+          "macro_f1": 67.5,
+          "sarcasm_f1": 13.29,
+          "sarcasm_prauc": 8.88,
+          "sent_acc_on_sarc": 90.18,
+          "polarity_inversion_rate": 9.82
+        },
+        {
+          "seed": 2024,
+          "accuracy": 69.89,
+          "macro_f1": 68.43,
+          "sarcasm_f1": 12.41,
+          "sarcasm_prauc": 9.61,
+          "sent_acc_on_sarc": 90.18,
+          "polarity_inversion_rate": 9.82
+        },
+        {
+          "seed": 777,
+          "accuracy": 68.44,
+          "macro_f1": 66.67,
+          "sarcasm_f1": 12.9,
+          "sarcasm_prauc": 8.69,
+          "sent_acc_on_sarc": 92.86,
+          "polarity_inversion_rate": 7.14
+        },
+        {
+          "seed": 999,
+          "accuracy": 68.24,
+          "macro_f1": 66.45,
+          "sarcasm_f1": 14.53,
+          "sarcasm_prauc": 9.31,
+          "sent_acc_on_sarc": 90.18,
+          "polarity_inversion_rate": 9.82
+        }
+      ],
+      "sarcasm_f1_mean": 12.88,
+      "sarcasm_f1_std": 1.07,
+      "sarcasm_f1_item_ci": [
+        6.15,
+        16.61
+      ],
+      "sarcasm_prauc_mean": 9.05,
+      "sarcasm_prauc_std": 0.35
+    },
+    "Control_KuBERT_Incongruity_beta0_5": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 61.91,
+      "accuracy_std": 1.22,
+      "accuracy_item_ci": [
+        60.42,
+        65.29
+      ],
+      "macro_f1_mean": 56.75,
+      "macro_f1_std": 1.86,
+      "macro_f1_item_ci": [
+        55.71,
+        60.83
+      ],
+      "sent_acc_on_sarc_mean": 99.11,
+      "polarity_inversion_rate_mean": 0.89,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 62.85,
+          "macro_f1": 58.27,
+          "sarcasm_f1": 13.55,
+          "sarcasm_prauc": 8.75,
+          "sent_acc_on_sarc": 99.11,
+          "polarity_inversion_rate": 0.89
+        },
+        {
+          "seed": 101,
+          "accuracy": 61.21,
+          "macro_f1": 55.78,
+          "sarcasm_f1": 14.55,
+          "sarcasm_prauc": 8.87,
+          "sent_acc_on_sarc": 99.11,
+          "polarity_inversion_rate": 0.89
+        },
+        {
+          "seed": 2024,
+          "accuracy": 63.71,
+          "macro_f1": 59.45,
+          "sarcasm_f1": 15.38,
+          "sarcasm_prauc": 9.58,
+          "sent_acc_on_sarc": 97.32,
+          "polarity_inversion_rate": 2.68
+        },
+        {
+          "seed": 777,
+          "accuracy": 60.29,
+          "macro_f1": 54.24,
+          "sarcasm_f1": 14.18,
+          "sarcasm_prauc": 8.71,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 999,
+          "accuracy": 61.47,
+          "macro_f1": 56.03,
+          "sarcasm_f1": 15.21,
+          "sarcasm_prauc": 9.34,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        }
+      ],
+      "sarcasm_f1_mean": 14.57,
+      "sarcasm_f1_std": 0.67,
+      "sarcasm_f1_item_ci": [
+        8.36,
+        18.79
+      ],
+      "sarcasm_prauc_mean": 9.05,
+      "sarcasm_prauc_std": 0.35
+    },
+    "Control_KuBERT_Incongruity_beta1_0": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 52.32,
+      "accuracy_std": 1.48,
+      "accuracy_item_ci": [
+        51.08,
+        56.08
+      ],
+      "macro_f1_mean": 40.43,
+      "macro_f1_std": 2.8,
+      "macro_f1_item_ci": [
+        40.6,
+        45.11
+      ],
+      "sent_acc_on_sarc_mean": 100.0,
+      "polarity_inversion_rate_mean": 0.0,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 53.58,
+          "macro_f1": 42.86,
+          "sarcasm_f1": 13.61,
+          "sarcasm_prauc": 8.89,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 101,
+          "accuracy": 51.48,
+          "macro_f1": 38.86,
+          "sarcasm_f1": 14.99,
+          "sarcasm_prauc": 8.85,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 2024,
+          "accuracy": 54.57,
+          "macro_f1": 44.65,
+          "sarcasm_f1": 16.03,
+          "sarcasm_prauc": 9.48,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 777,
+          "accuracy": 51.02,
+          "macro_f1": 37.95,
+          "sarcasm_f1": 12.01,
+          "sarcasm_prauc": 8.68,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        },
+        {
+          "seed": 999,
+          "accuracy": 50.95,
+          "macro_f1": 37.82,
+          "sarcasm_f1": 15.31,
+          "sarcasm_prauc": 9.36,
+          "sent_acc_on_sarc": 100.0,
+          "polarity_inversion_rate": 0.0
+        }
+      ],
+      "sarcasm_f1_mean": 14.39,
+      "sarcasm_f1_std": 1.43,
+      "sarcasm_f1_item_ci": [
+        8.28,
+        18.98
+      ],
+      "sarcasm_prauc_mean": 9.05,
+      "sarcasm_prauc_std": 0.31
+    },
+    "Control_KuBERT_ClassWeighted_CE": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 69.76,
+      "accuracy_std": 0.92,
+      "accuracy_item_ci": [
+        67.98,
+        72.58
+      ],
+      "macro_f1_mean": 69.66,
+      "macro_f1_std": 1.0,
+      "macro_f1_item_ci": [
+        67.95,
+        72.55
+      ],
+      "sent_acc_on_sarc_mean": 67.14,
+      "polarity_inversion_rate_mean": 32.86,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 70.28,
+          "macro_f1": 70.27,
+          "sarcasm_f1": 10.71,
+          "sarcasm_prauc": 9.85,
+          "sent_acc_on_sarc": 64.29,
+          "polarity_inversion_rate": 35.71
+        },
+        {
+          "seed": 101,
+          "accuracy": 70.68,
+          "macro_f1": 70.67,
+          "sarcasm_f1": 13.71,
+          "sarcasm_prauc": 9.75,
+          "sent_acc_on_sarc": 69.64,
+          "polarity_inversion_rate": 30.36
+        },
+        {
+          "seed": 2024,
+          "accuracy": 70.48,
+          "macro_f1": 70.44,
+          "sarcasm_f1": 13.07,
+          "sarcasm_prauc": 10.32,
+          "sent_acc_on_sarc": 69.64,
+          "polarity_inversion_rate": 30.36
+        },
+        {
+          "seed": 777,
+          "accuracy": 69.03,
+          "macro_f1": 68.76,
+          "sarcasm_f1": 12.97,
+          "sarcasm_prauc": 9.44,
+          "sent_acc_on_sarc": 77.68,
+          "polarity_inversion_rate": 22.32
+        },
+        {
+          "seed": 999,
+          "accuracy": 68.31,
+          "macro_f1": 68.18,
+          "sarcasm_f1": 12.97,
+          "sarcasm_prauc": 10.21,
+          "sent_acc_on_sarc": 54.46,
+          "polarity_inversion_rate": 45.54
+        }
+      ],
+      "sarcasm_f1_mean": 12.69,
+      "sarcasm_f1_std": 1.03,
+      "sarcasm_f1_item_ci": [
+        5.33,
+        16.45
+      ],
+      "sarcasm_prauc_mean": 9.91,
+      "sarcasm_prauc_std": 0.32
+    },
+    "Control_KuBERT_Oversampling": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 68.37,
+      "accuracy_std": 0.43,
+      "accuracy_item_ci": [
+        66.73,
+        71.33
+      ],
+      "macro_f1_mean": 66.27,
+      "macro_f1_std": 0.55,
+      "macro_f1_item_ci": [
+        64.64,
+        69.52
+      ],
+      "sent_acc_on_sarc_mean": 93.39,
+      "polarity_inversion_rate_mean": 6.61,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 69.03,
+          "macro_f1": 67.09,
+          "sarcasm_f1": 10.06,
+          "sarcasm_prauc": 11.98,
+          "sent_acc_on_sarc": 92.86,
+          "polarity_inversion_rate": 7.14
+        },
+        {
+          "seed": 101,
+          "accuracy": 67.78,
+          "macro_f1": 65.53,
+          "sarcasm_f1": 17.06,
+          "sarcasm_prauc": 11.07,
+          "sent_acc_on_sarc": 93.75,
+          "polarity_inversion_rate": 6.25
+        },
+        {
+          "seed": 2024,
+          "accuracy": 68.44,
+          "macro_f1": 66.26,
+          "sarcasm_f1": 14.71,
+          "sarcasm_prauc": 14.13,
+          "sent_acc_on_sarc": 93.75,
+          "polarity_inversion_rate": 6.25
+        },
+        {
+          "seed": 777,
+          "accuracy": 68.05,
+          "macro_f1": 65.84,
+          "sarcasm_f1": 10.97,
+          "sarcasm_prauc": 10.08,
+          "sent_acc_on_sarc": 93.75,
+          "polarity_inversion_rate": 6.25
+        },
+        {
+          "seed": 999,
+          "accuracy": 68.57,
+          "macro_f1": 66.61,
+          "sarcasm_f1": 17.84,
+          "sarcasm_prauc": 11.84,
+          "sent_acc_on_sarc": 92.86,
+          "polarity_inversion_rate": 7.14
+        }
+      ],
+      "sarcasm_f1_mean": 14.13,
+      "sarcasm_f1_std": 3.14,
+      "sarcasm_f1_item_ci": [
+        3.95,
+        16.77
+      ],
+      "sarcasm_prauc_mean": 11.82,
+      "sarcasm_prauc_std": 1.34
+    },
+    "KurdDialect_Transformer": {
+      "has_sarcasm_head": true,
+      "accuracy_mean": 76.4,
+      "accuracy_std": 0.75,
+      "accuracy_item_ci": [
+        74.69,
+        78.9
+      ],
+      "macro_f1_mean": 76.02,
+      "macro_f1_std": 0.88,
+      "macro_f1_item_ci": [
+        74.29,
+        78.59
+      ],
+      "sent_acc_on_sarc_mean": 81.78,
+      "polarity_inversion_rate_mean": 18.22,
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 76.79,
+          "macro_f1": 76.46,
+          "sarcasm_f1": 11.66,
+          "sarcasm_prauc": 9.56,
+          "sent_acc_on_sarc": 80.36,
+          "polarity_inversion_rate": 19.64
+        },
+        {
+          "seed": 101,
+          "accuracy": 75.87,
+          "macro_f1": 75.51,
+          "sarcasm_f1": 12.9,
+          "sarcasm_prauc": 9.2,
+          "sent_acc_on_sarc": 79.46,
+          "polarity_inversion_rate": 20.54
+        },
+        {
+          "seed": 2024,
+          "accuracy": 75.81,
+          "macro_f1": 75.3,
+          "sarcasm_f1": 15.85,
+          "sarcasm_prauc": 9.27,
+          "sent_acc_on_sarc": 85.71,
+          "polarity_inversion_rate": 14.29
+        },
+        {
+          "seed": 777,
+          "accuracy": 75.81,
+          "macro_f1": 75.27,
+          "sarcasm_f1": 16.5,
+          "sarcasm_prauc": 9.64,
+          "sent_acc_on_sarc": 83.93,
+          "polarity_inversion_rate": 16.07
+        },
+        {
+          "seed": 999,
+          "accuracy": 77.71,
+          "macro_f1": 77.54,
+          "sarcasm_f1": 13.03,
+          "sarcasm_prauc": 9.86,
+          "sent_acc_on_sarc": 79.46,
+          "polarity_inversion_rate": 20.54
+        }
+      ],
+      "sarcasm_f1_mean": 13.99,
+      "sarcasm_f1_std": 1.86,
+      "sarcasm_f1_item_ci": [
+        5.94,
+        17.72
+      ],
+      "sarcasm_prauc_mean": 9.51,
+      "sarcasm_prauc_std": 0.24
+    }
+  },
+  "router_diagnostics": {
+    "Control_KuBERT_DGSA_Gated": {
+      "gate_distribution": [
+        0.4336,
+        0.1044,
+        0.462
+      ],
+      "gate_entropy": 0.955,
+      "dialects": [
+        "General",
+        "Hawleri",
+        "Sulemani"
+      ]
+    },
+    "KurdDialect_Transformer": {
+      "gate_distribution": [
+        0.3725,
+        0.1422,
+        0.4853
+      ],
+      "gate_entropy": 0.9961,
+      "dialects": [
+        "General",
+        "Hawleri",
+        "Sulemani"
+      ]
+    }
+  }
+}

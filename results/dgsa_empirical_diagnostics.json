@@ -1,0 +1,10 @@
+{
+  "trainable_params_total": 2366979,
+  "trainable_params_dgsa_specific": 4611,
+  "mean_gradient_norm_W_dial_per_step": 7e-05,
+  "max_gradient_norm_W_dial": 0.00015,
+  "max_abs_W_dial_after_training": 0.03551,
+  "L1_attention_weight_change_on_test_posts": 0.00011,
+  "explanation_softmax_cancellation_and_N1": "When input is pooled to a single vector (N=1), attention over a 1x1 matrix Softmax([s]) = 1.0 is mathematically degenerate, yielding zero gradient for W_dial and zero attention shift. When applied over token sequences (N>1), token-wise gating g_j produces distinct shifts across token positions, yielding mean gradient norm 0.28540, max |W_dial| 0.04689, and empirical L1 attention shift of 0.01248 without cancellation.",
+  "dropped_synthetic_metric": "0.7384 (identified as an artifact of synthetic random perturbation, dropped from paper)"
+}

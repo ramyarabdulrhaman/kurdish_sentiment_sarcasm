@@ -1,0 +1,2 @@
+33e22f88ecb3f16a526f720b3fb8b0ba50f837c274a3e96b8e0cc8087e980caf  data/raw/kurdish_sentiment_train.csv
+cbe00a535f74fcf2956d7bc8bf9e2a035db0031068a3cc231f42cf31108215c4  data/raw/kurdish_sentiment_test.csv
