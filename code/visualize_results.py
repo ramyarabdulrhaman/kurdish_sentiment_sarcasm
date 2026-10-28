@@ -31,8 +31,9 @@ plt.rcParams.update({
 })
 
 def main():
-    results_path = r"c:\Users\Alienware\Desktop\Paper\article_6_kurdish_sentiment_sarcasm\results\experiment_results_5seeds.json"
-    figures_dir = r"c:\Users\Alienware\Desktop\Paper\article_6_kurdish_sentiment_sarcasm\figures"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    results_path = os.path.join(base_dir, "results", "experiment_results_5seeds.json")
+    figures_dir = os.path.join(base_dir, "figures")
     os.makedirs(figures_dir, exist_ok=True)
     
     with open(results_path, 'r', encoding='utf-8') as f:

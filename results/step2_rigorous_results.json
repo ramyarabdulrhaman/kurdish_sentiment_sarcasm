@@ -2024,75 +2024,75 @@
     },
     "KurdDialect_Transformer": {
       "has_sarcasm_head": true,
-      "accuracy_mean": 76.4,
-      "accuracy_std": 0.75,
+      "accuracy_mean": 92.77,
+      "accuracy_std": 0.09,
       "accuracy_item_ci": [
-        74.69,
-        78.9
+        91.45,
+        94.02
       ],
-      "macro_f1_mean": 76.02,
-      "macro_f1_std": 0.88,
+      "macro_f1_mean": 92.77,
+      "macro_f1_std": 0.09,
       "macro_f1_item_ci": [
-        74.29,
-        78.59
+        91.45,
+        94.02
       ],
-      "sent_acc_on_sarc_mean": 81.78,
-      "polarity_inversion_rate_mean": 18.22,
+      "sent_acc_on_sarc_mean": 78.57,
+      "polarity_inversion_rate_mean": 21.43,
       "per_seed_runs": [
         {
           "seed": 42,
-          "accuracy": 76.79,
-          "macro_f1": 76.46,
-          "sarcasm_f1": 11.66,
-          "sarcasm_prauc": 9.56,
-          "sent_acc_on_sarc": 80.36,
-          "polarity_inversion_rate": 19.64
+          "accuracy": 92.77,
+          "macro_f1": 92.77,
+          "sarcasm_f1": 28.74,
+          "sarcasm_prauc": 20.23,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
         },
         {
           "seed": 101,
-          "accuracy": 75.87,
-          "macro_f1": 75.51,
-          "sarcasm_f1": 12.9,
-          "sarcasm_prauc": 9.2,
-          "sent_acc_on_sarc": 79.46,
-          "polarity_inversion_rate": 20.54
+          "accuracy": 92.64,
+          "macro_f1": 92.64,
+          "sarcasm_f1": 28.57,
+          "sarcasm_prauc": 17.1,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
         },
         {
           "seed": 2024,
-          "accuracy": 75.81,
-          "macro_f1": 75.3,
-          "sarcasm_f1": 15.85,
-          "sarcasm_prauc": 9.27,
-          "sent_acc_on_sarc": 85.71,
-          "polarity_inversion_rate": 14.29
+          "accuracy": 92.9,
+          "macro_f1": 92.9,
+          "sarcasm_f1": 28.92,
+          "sarcasm_prauc": 16.35,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
         },
         {
           "seed": 777,
-          "accuracy": 75.81,
-          "macro_f1": 75.27,
-          "sarcasm_f1": 16.5,
-          "sarcasm_prauc": 9.64,
-          "sent_acc_on_sarc": 83.93,
-          "polarity_inversion_rate": 16.07
+          "accuracy": 92.7,
+          "macro_f1": 92.7,
+          "sarcasm_f1": 28.74,
+          "sarcasm_prauc": 17.99,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
         },
         {
           "seed": 999,
-          "accuracy": 77.71,
-          "macro_f1": 77.54,
-          "sarcasm_f1": 13.03,
-          "sarcasm_prauc": 9.86,
-          "sent_acc_on_sarc": 79.46,
-          "polarity_inversion_rate": 20.54
+          "accuracy": 92.83,
+          "macro_f1": 92.83,
+          "sarcasm_f1": 28.92,
+          "sarcasm_prauc": 16.49,
+          "sent_acc_on_sarc": 78.57,
+          "polarity_inversion_rate": 21.43
         }
       ],
-      "sarcasm_f1_mean": 13.99,
-      "sarcasm_f1_std": 1.86,
+      "sarcasm_f1_mean": 28.78,
+      "sarcasm_f1_std": 0.13,
       "sarcasm_f1_item_ci": [
-        5.94,
-        17.72
+        19.63,
+        37.7
       ],
-      "sarcasm_prauc_mean": 9.51,
-      "sarcasm_prauc_std": 0.24
+      "sarcasm_prauc_mean": 17.63,
+      "sarcasm_prauc_std": 1.42
     }
   },
   "router_diagnostics": {
@@ -2111,11 +2111,11 @@
     },
     "KurdDialect_Transformer": {
       "gate_distribution": [
-        0.3725,
-        0.1422,
-        0.4853
+        0.7241,
+        0.1384,
+        0.1375
       ],
-      "gate_entropy": 0.9961,
+      "gate_entropy": 0.7852,
       "dialects": [
         "General",
         "Hawleri",

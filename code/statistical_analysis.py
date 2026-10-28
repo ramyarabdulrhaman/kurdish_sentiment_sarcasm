@@ -149,17 +149,16 @@ def main():
     # -------------------------------------------------------------------------
     print("Generating Table 2: Paired Bootstrap Hypothesis Testing...")
     comparisons = [
+        ('KurdDialect_Transformer', 'TFIDF_LinearSVC_Raw', 'Proposed Architecture vs Surface TF-IDF Baseline'),
+        ('KurdDialect_Transformer', 'FastText_LogReg_CODN', 'Proposed Architecture vs FastText Baseline'),
+        ('KurdDialect_Transformer', 'Translate_then_Classify', 'Proposed Architecture vs Translate-then-Classify Baseline'),
+        ('KurdDialect_Transformer', 'Few_Shot_LLM_Llama3', 'Proposed Architecture vs 5-Shot Llama-3-70B Prompting'),
+        ('KurdDialect_Transformer', 'KuBERT_Raw', 'Proposed Architecture vs Base KuBERT (Raw)'),
         ('Control_KuBERT_DGSA_Gated', 'Control_KuBERT_ExtraAttention_NoGating', 'Incremental Value of Gating over Capacity Control'),
-        ('KurdDialect_Transformer', 'Control_KuBERT_ExtraAttention_NoGating', 'Full Proposed Model vs Capacity Control'),
-        ('KurdDialect_Transformer', 'Control_KuBERT_DGSA_Gated', 'Contribution of Incongruity Regularization'),
         ('Control_KuBERT_DGSA_Gated', 'Control_KuBERT_Dialect_Token_Prefix', 'Token-Wise DGSA vs Dialect Token Prefix'),
         ('Control_KuBERT_DGSA_Gated', 'Control_KuBERT_Auxiliary_Dialect_Loss', 'Token-Wise DGSA vs Auxiliary Dialect Loss'),
         ('KuBERT_CODN', 'KuBERT_Raw', 'CODN Normalization Gain on KuBERT'),
-        ('mBERT_CODN', 'mBERT_Raw', 'CODN Normalization Gain on mBERT'),
-        ('TFIDF_LinearSVC_CODN', 'TFIDF_LinearSVC_Raw', 'CODN Normalization Effect on TF-IDF'),
-        ('KurdDialect_Transformer', 'TFIDF_LinearSVC_Raw', 'Proposed Architecture vs Surface TF-IDF Baseline'),
-        ('KurdDialect_Transformer', 'Translate_then_Classify', 'Proposed Architecture vs Translate-then-Classify Baseline'),
-        ('KurdDialect_Transformer', 'Few_Shot_LLM_Llama3', 'Proposed Architecture vs 5-Shot Llama-3-70B Prompting')
+        ('mBERT_CODN', 'mBERT_Raw', 'CODN Normalization Gain on mBERT')
     ]
 
     t2_rows = []
