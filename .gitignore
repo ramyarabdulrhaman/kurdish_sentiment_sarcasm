@@ -30,4 +30,5 @@ Thumbs.db
 *.log
 *.fls
 *.fdb_latexmk
+*.bib
 article.pdf
