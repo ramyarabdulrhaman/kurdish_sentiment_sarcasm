@@ -1,0 +1,11 @@
+Comparison,Model A,Model B,Observed Diff (%),Raw p-value,McNemar Chi2,Verdict,Holm-Adjusted p-value
+Proposed Architecture vs Surface TF-IDF Baseline,KurdDialect Transformer,TFIDF LinearSVC Raw,2.11,0.0,0.0,Statistically Significant,0.0
+Proposed Architecture vs FastText Baseline,KurdDialect Transformer,FastText LogReg CODN,1.84,0.0032,0.0,Statistically Significant,0.0128
+Proposed Architecture vs Translate-then-Classify Baseline,KurdDialect Transformer,Translate then Classify,2.04,0.001,0.0,Statistically Significant,0.005
+Proposed Architecture vs 5-Shot Llama-3-70B Prompting,KurdDialect Transformer,Few Shot LLM Llama3,2.04,0.0007,0.0,Statistically Significant,0.0042
+Proposed Architecture vs Base KuBERT (Raw),KurdDialect Transformer,KuBERT Raw,21.45,0.0,0.0,Statistically Significant,0.0
+Incremental Value of Gating over Capacity Control,Control KuBERT DGSA Gated,Control KuBERT ExtraAttention NoGating,0.49,0.021,0.0,Statistically Significant,0.063
+Token-Wise DGSA vs Dialect Token Prefix,Control KuBERT DGSA Gated,Control KuBERT Dialect Token Prefix,5.55,0.0,0.0,Statistically Significant,0.0
+Token-Wise DGSA vs Auxiliary Dialect Loss,Control KuBERT DGSA Gated,Control KuBERT Auxiliary Dialect Loss,5.93,0.0,0.0,Statistically Significant,0.0
+CODN Normalization Gain on KuBERT,KuBERT CODN,KuBERT Raw,0.69,0.9596,0.0,Not Significant,0.9596
+CODN Normalization Gain on mBERT,mBERT CODN,mBERT Raw,1.08,0.392,0.0,Not Significant,0.784

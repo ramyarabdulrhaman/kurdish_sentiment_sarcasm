@@ -1,0 +1,4 @@
+Dialect Variety,Test Count (N),Correct Count (k/n),Accuracy (%) [95% CI],Claim Status
+General,1424,1320/1424,"92.70% [91.36, 94.03]",Primary Benchmark
+Hawleri,22,18/22,"81.82% [63.64, 95.45]",Exploratory (n < 100; CI reported)
+Sulemani,75,73/75,"97.33% [93.33, 100.00]",Exploratory (n < 100; CI reported)

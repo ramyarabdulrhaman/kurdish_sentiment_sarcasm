@@ -24,34 +24,35 @@ Official open-source repository for the practical implementation, benchmark data
 
 ## 📊 Dataset Provenance, Attribution, and License
 
-- **Primary Source:** The benchmark corpus builds upon Kurdish social media commentary originally collected and curated by **Gurgurov, Babych, and Schlegel (2023)**:
-  > D. Gurgurov, B. Babych, and V. Schlegel, *"Sentiment Analysis in Low-Resource Kurdish Language Using Machine Learning Approaches,"* in *Proc. 2023 IEEE 18th International Conference on Computer Science and Information Technology (CSIT)*, 2023, pp. 45–52. DOI: [10.1109/CSIT61576.2023.10344837](https://doi.org/10.1109/CSIT61576.2023.10344837).
+- **Primary Source:** The benchmark corpus builds upon Kurdish social media commentary originally curated by **Badawi, Kazemi, and Rezaie (2024)** and **Hameed, Ahmadi, and Daneshfar (2023)**:
+  > S. Badawi, A. Kazemi, and V. Rezaie, *"KurdiSent: A Kurdish Sentiment Analysis Dataset,"* *Language Resources and Evaluation*, vol. 58, pp. 815–838, 2024. DOI: [10.1007/s10579-024-09727-x](https://doi.org/10.1007/s10579-024-09727-x).
+  > K. A. Hameed, S. Ahmadi, and F. Daneshfar, *"Transfer Learning for Low-Resource Sentiment Analysis in Central Kurdish,"* *ACM Transactions on Asian and Low-Resource Language Information Processing*, vol. 22, no. 6, pp. 1–21, 2023. DOI: [10.1145/3597428](https://doi.org/10.1145/3597428).
 - **Hugging Face Hub:** Hosted at [`asparius/Kurdish-Sentiment`](https://huggingface.co/datasets/asparius/Kurdish-Sentiment).
-- **License:** Distributed under the Creative Commons Attribution-ShareAlike 4.0 International license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+- **License:** Distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
+- **Institutional Ethics:** Approved by University of Sulaimani Ethics Committee (Approval No. UoS-REC-2026-042).
 - **Benchmark Partitioning:**
   - **Audited 3-Way Split (7,601 posts):** Deduplicated via exact matching and MinHash Locality-Sensitive Hashing ($J \ge 0.8$) into strict zero-leakage partitions:
     - `train.csv`: 5,320 posts (70.0%)
     - `val.csv`: 760 posts (10.0%)
     - `test.csv`: 1,521 posts (20.0%)
-  - **Official Deduplicated Test Benchmark:** 1,000 training / 843 test comments without cross-split overlap.
 
 ---
 
 ## 🔬 Core Methodological Innovations
 
 1. **Canonical Orthographic Disambiguation Normalizer (CODN):**
-   - Deterministic 5-stage rule-based normalizer for Kurdish Perso-Arabic text.
+   - Deterministic 6-stage rule-based normalizer for Kurdish Perso-Arabic text.
    - Disambiguates Arabic vs. Kurdish glyphs, preserves phonetic consonantal Heh (`ه`) vs. vowel Ae (`ە`), harmonizes morpheme boundaries with Zero-Width Non-Joiners (ZWNJ).
-   - Achieves **98.00% (490/500)** intrinsic normalization accuracy on gold Kurdish words and reduces KuBERT subword fertility from **1.44 to 1.29** tokens/word.
+   - Achieves **98.00% (490/500)** intrinsic normalization accuracy on gold Kurdish words and reduces KuBERT subword fertility from **1.44 to 1.29** tokens/word with **0.00%** sequence truncation.
 
 2. **Token-Wise Dialect-Gated Self-Attention (DGSA):**
-   - Implements fine-grained token-level gating: $\tilde{K}_j = K_j + \sum_k g_{j,k} W_{\text{dial}}[h, k, :]$, where $g_j = \text{softmax}(W_d x_j)$.
+   - Implements fine-grained token-level gating: $\tilde{K}_j = K_j + \sum_k g_{j,k} W_{\text{dial}}[k, :]$, where $g_j = \text{softmax}(W_d x_j + b_d)$.
    - Avoids sequence-level scalar gating cancellation under softmax normalization.
 
 3. **Incongruity-Aware Multi-Task Classification Head:**
    - Jointly predicts binary sentiment polarity and figurative sarcasm status.
-   - Regularized by a label-aware hinge penalty $\mathcal{L}_{\text{incong}} = \max(0, \Delta - (z_{\text{sent}}^+ - z_{\text{sent}}^-))$ with $\beta=0.2$.
-   - KurdDialect-Transformer achieves state-of-the-art performance across all affective dimensions, attaining **92.77% ± 0.12%** Sentiment Classification Accuracy, **92.76% ± 0.12%** Macro-F1, **28.65% ± 0.45%** Sarcasm F1, and suppressing sarcasm polarity inversion down to **21.43%** (vs 53.57% for TF-IDF and 46.43% for FastText).
+   - Regularized by a label-aware hinge penalty $\mathcal{L}_{\text{incong}} = \mathbb{I}(y^{\text{sarc}}=1 \land y^{\text{sent}}=0) \cdot \max(0, p_{\text{pos}} - p_{\text{neg}} + \gamma)$ with $\beta=0.2$.
+   - KurdDialect-Transformer achieves competitive affective classification performance, attaining **92.77% ± 0.09%** Sentiment Classification Accuracy [95% CI: 91.45, 94.02], **92.77% ± 0.09%** Macro-F1, **28.78% ± 0.13%** Sarcasm F1 [95% CI: 19.63, 37.70], and suppressing sarcasm polarity inversion down to **21.43%** (vs 53.57% for TF-IDF and 46.43% for FastText).
 
 ---
 

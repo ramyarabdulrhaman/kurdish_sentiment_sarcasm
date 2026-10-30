@@ -163,13 +163,20 @@ def main():
 
     t2_rows = []
     p_values = []
+    diffs = []
     
     for mod_a, mod_b, comp_name in comparisons:
+        # Use 5-seed mean difference to strictly match Table 1
+        acc_a = exp_data['models'][mod_a]['accuracy_mean']
+        acc_b = exp_data['models'][mod_b]['accuracy_mean']
+        diff = acc_a - acc_b
+        diffs.append(diff)
+        
         p_a = np.array(preds[mod_a]['sent_predictions'])
         p_b = np.array(preds[mod_b]['sent_predictions'])
         
         # Paired bootstrap
-        p_val, diff = paired_bootstrap_test(y_test_sent, p_a, p_b, n_bootstraps=10000)
+        p_val, _ = paired_bootstrap_test(y_test_sent, p_a, p_b, n_bootstraps=10000)
         p_values.append(p_val)
         
         # McNemar test
@@ -195,15 +202,20 @@ def main():
             'Verdict': verdict
         })
 
-    # Holm-Bonferroni correction
-    sorted_indices = np.argsort(p_values)
+    # Strict Holm-Bonferroni step-down correction
     m = len(p_values)
-    holm_p = np.zeros(m)
-    for rank, idx in enumerate(sorted_indices):
-        holm_p[idx] = min(1.0, p_values[idx] * (m - rank))
+    order = np.argsort(p_values)
+    adj_p = np.zeros(m)
+    current_max = 0.0
+    for rank, idx in enumerate(order):
+        factor = m - rank
+        raw_p = p_values[idx]
+        adj = min(1.0, raw_p * factor)
+        current_max = max(current_max, adj)
+        adj_p[idx] = min(1.0, current_max)
 
     for idx, row in enumerate(t2_rows):
-        row['Holm-Adjusted p-value'] = round(holm_p[idx], 4)
+        row['Holm-Adjusted p-value'] = round(adj_p[idx], 4)
 
     t2_df = pd.DataFrame(t2_rows)
     t2_df.to_csv(os.path.join(TABLES_DIR, 'table_2_statistical_hypothesis_testing.csv'), index=False)

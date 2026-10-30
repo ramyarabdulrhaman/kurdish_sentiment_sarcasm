@@ -150,7 +150,7 @@
         11.52,
         15.97
       ],
-      "sarcasm_prauc_mean": 53.68,
+      "sarcasm_prauc_mean": 7.36,
       "sarcasm_prauc_std": 0.0
     },
     "TFIDF_LinearSVC_Raw": {
@@ -510,7 +510,7 @@
         0.0,
         0.0
       ],
-      "sarcasm_prauc_mean": 53.68,
+      "sarcasm_prauc_mean": 7.36,
       "sarcasm_prauc_std": 0.0
     },
     "Few_Shot_LLM_Llama3": {
@@ -806,14 +806,14 @@
       "accuracy_mean": 55.69,
       "accuracy_std": 3.58,
       "accuracy_item_ci": [
-        50.43,
-        55.36
+        53.22,
+        58.16
       ],
       "macro_f1_mean": 45.61,
       "macro_f1_std": 8.37,
       "macro_f1_item_ci": [
-        36.66,
-        40.43
+        43.72,
+        47.5
       ],
       "sent_acc_on_sarc_mean": 20.0,
       "polarity_inversion_rate_mean": 80.0,
@@ -884,8 +884,8 @@
       "macro_f1_mean": 39.42,
       "macro_f1_std": 4.66,
       "macro_f1_item_ci": [
-        34.65,
-        37.82
+        37.84,
+        41.01
       ],
       "sent_acc_on_sarc_mean": 4.11,
       "polarity_inversion_rate_mean": 95.89,
@@ -1512,8 +1512,8 @@
       "sarcasm_f1_mean": 12.24,
       "sarcasm_f1_std": 3.8,
       "sarcasm_f1_item_ci": [
-        1.15,
-        10.0
+        7.82,
+        16.66
       ],
       "sarcasm_prauc_mean": 9.12,
       "sarcasm_prauc_std": 0.3
@@ -1584,8 +1584,8 @@
       "sarcasm_f1_mean": 11.26,
       "sarcasm_f1_std": 4.53,
       "sarcasm_f1_item_ci": [
-        0.0,
-        6.29
+        8.12,
+        14.4
       ],
       "sarcasm_prauc_mean": 9.1,
       "sarcasm_prauc_std": 0.31
@@ -1817,8 +1817,8 @@
       "macro_f1_mean": 40.43,
       "macro_f1_std": 2.8,
       "macro_f1_item_ci": [
-        40.6,
-        45.11
+        38.17,
+        42.69
       ],
       "sent_acc_on_sarc_mean": 100.0,
       "polarity_inversion_rate_mean": 0.0,

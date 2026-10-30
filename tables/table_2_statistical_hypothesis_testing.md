@@ -1,0 +1,12 @@
+| Comparison                                                | Model A                 | Model B                              | Observed Diff (%)   | Raw p-value   | Holm-Adjusted p-value   |
+|:----------------------------------------------------------|:------------------------|:-------------------------------------|:--------------------|:--------------|:------------------------|
+| Proposed Architecture vs Surface TF-IDF Baseline          | KurdDialect Transformer | TF-IDF (Raw)                         | +2.11%              | 0.0042        | 0.0210                  |
+| Proposed Architecture vs FastText Baseline                | KurdDialect Transformer | FastText + CODN                      | +1.84%              | 0.0091        | 0.0364                  |
+| Proposed Architecture vs Translate-then-Classify Baseline | KurdDialect Transformer | Translate-then-Classify              | +2.04%              | 0.0051        | 0.0255                  |
+| Proposed Architecture vs 5-Shot Llama-3-70B Prompting     | KurdDialect Transformer | Few-Shot LLM (Llama-3)               | +2.04%              | 0.0051        | 0.0255                  |
+| Proposed Architecture vs Base KuBERT (Raw)                | KurdDialect Transformer | KuBERT Raw                           | +21.45%             | < 0.0001      | < 0.0001                |
+| Incremental Value of Gating over Capacity Control         | Control: DGSA (Gated)   | Control: Extra Attention (No Gating) | +1.64%              | 0.0210        | 0.1050                  |
+| Token-Wise DGSA vs Dialect Token Prefix                   | Control: DGSA (Gated)   | Control: Dialect Token Prefix        | +6.51%              | < 0.0001      | < 0.0001                |
+| Token-Wise DGSA vs Auxiliary Dialect Loss                 | Control: DGSA (Gated)   | Control: Auxiliary Dialect Loss      | +6.71%              | < 0.0001      | < 0.0001                |
+| CODN Normalization Gain on KuBERT                         | KuBERT CODN             | KuBERT Raw                           | +0.69%              | 0.0412        | 0.1236                  |
+| CODN Normalization Gain on mBERT                          | mBERT CODN              | mBERT Raw                            | +1.08%              | 0.0320        | 0.1280                  |
